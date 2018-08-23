@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MagSue</title>
+    <style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>HTML Table</h2>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Heart Rate</th>
+    <th>Tempearture</th>
+
+    {% for d in data %}
+        <tr>
+        <td>{{ d.User.username }}</td>
+        <td>{{ d.heart_rate }}   </td>
+        <td>{{ d.temperature }}  </td>
+        </tr>
+    {% endfor %}
+</table>
+
+
+</body>
+</html>
